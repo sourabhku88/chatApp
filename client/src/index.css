@@ -1,0 +1,93 @@
+body {
+    background: linear-gradient(315deg, rgba(101, 0, 94, 0.395) 3%, rgba(60, 133, 206, 0.391) 38%, rgba(48, 238, 225, 0.308) 68%, rgba(255, 25, 25, 0.335) 98%);
+    animation: gradient 15s ease infinite;
+    background-attachment: fixed;
+    background-size: 400%;
+}
+
+.card {
+    width: 56% !important;
+    background-color: transparent;
+
+}
+
+.btn-send {
+    position: relative;
+    bottom: 0;
+}
+
+.title {
+    font-weight: bold;
+    position: relative;
+    top: 0;
+}
+
+.msg-box .user-section{
+    height: 60vh;
+    overflow: scroll;
+}
+
+
+.msg-box .left {
+    max-width: 50%;
+    padding: 8px;
+    margin: 6px;
+    box-shadow: 0px 0px 20px -5px #ffffffab;
+    border-radius: 6px;
+    transform:
+        perspective(2000px) translate3d(0px, -47px, 198px) rotateX(-37deg) scale3d(0.86, 0.75, 1) translateY(50px);
+    will-change: transform;
+    transition: 0.4s ease-in-out transform;
+
+    &:hover {
+        transform: scale3d(1, 1, 1);
+
+
+    }
+}
+
+.msg-box .right {
+    padding: 8px;
+    width: 100% !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    transform:
+        perspective(2000px) translate3d(0px, -47px, 198px) rotateX(-37deg) scale3d(0.86, 0.75, 1) translateY(50px);
+    will-change: transform;
+    transition: 0.4s ease-in-out transform;
+
+    &:hover {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.msg-box .right>p {
+    width: 400px !important;
+    padding: 4px;
+    box-shadow: 0px 0px 20px -5px #ffffffab;
+    border-radius: 6px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.input-group-text{
+    cursor: pointer;
+}
+
+
+.users-section{
+    border: 1px solid red;
+}
