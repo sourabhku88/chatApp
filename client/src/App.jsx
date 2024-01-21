@@ -18,11 +18,11 @@ const App = () => {
   // }
   // name()
   useEffect(() => {
-    setUserName(askName());
+    // setUserName(askName());
   }, [])
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <Card name={useName} />
     </div>
   )
