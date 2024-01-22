@@ -5,20 +5,16 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
-
 .chat-container>div>h3 {
     text-align: center;
     margin: 16px 0;
-
     color: #22075E;
 }
-
 .welcome-user {
     color: #3B65E3;
+    text-transform: capitalize;
 }
-
 .chat-box {
     width: 700px;
     height: 400px;
@@ -81,6 +77,8 @@
     display: flex;
     align-items: center;
     gap: 4px;
+    text-transform: capitalize;
+    /* border: 1px solid red; */
 }
 
 .avatar {
@@ -94,6 +92,7 @@
     justify-content: center;
     align-items: center;
     border: 2px solid rgba(255, 0, 0, 0.42);
+    text-transform: capitalize;
 }
 
 .user-name {
@@ -230,6 +229,32 @@
 
 }
 
+.right-message {
+    width: 180px;
+    /* border: 1px solid green; */
+    border-radius: 8px;
+    padding: 4px;
+    border-radius: 8px;
+    position: relative;
+    background-color: #dcf8c6;
+    padding: 4px;
+    font-size: 12px;
+    word-wrap: break-word;
+}
+
+
+
+.right-message::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 4px;
+    border: 8px solid transparent;
+    border-top-color: #dcf8c6;
+    border-bottom: 0;
+    border-left: 0;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
@@ -238,6 +263,15 @@
     padding: 12px 0;
     background-color: #3B65E3;
     color: white;
+}
+
+.left-message {
+    border-radius: 4px;
+    background-color: #ddd;
+    padding: 4px;
+    font-size: 12px;
+    width: 200px;
+    word-wrap: break-word;
 }
 
 .all-chat {
@@ -253,14 +287,41 @@
 
 }
 
-.all-chat  > div {
-    border: 2px solid red;
+.all-chat>div {
+    /* border: 2px solid red; */
     width: 100%;
     /* text-align: end; */
 }
-.right{
-    text-align: end;
+
+.right {
+    display: flex;
+    justify-content: flex-end;
 }
-.left{
-    text-align: start;
+
+.left {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 200px;
+    /* border: 1px solid green; */
+    border-radius: 8px;
+    padding: 4px;
+    border-radius: 8px;
+    position: relative;
+    padding: 4px;
+    font-size: 12px;
+
+}
+
+.left::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 4px;
+    border: 8px solid transparent;
+    border-top-color: red;
+    border-bottom: 10;
+    border-left: 10;
+    border-top: 10;
+    border-right: 0;
 }
